@@ -129,14 +129,14 @@ let AGE = 40;
 let guessedAGE = 0;
 let i = 0;
 
-while ((i < 4) && (guessedAGE !== AGE)){
+while ((guessedAGE != AGE) && (i < 4)){
   //the loop would never stop when the (guessedAGE = AGE)
   i++;
     let guessedAGE = prompt(`Hey ${visitor}, what do you think Jon's age is?`);
 
-    if(guessedAGE === AGE){
+    if(guessedAGE == AGE){
         alert(`Damnit ${visitor}! That\'s right!  `); 
-      //return;  // is this cheating?  I have red squiggles.
+      return;  // is this cheating?  I have red squiggles.
     }else if (guessedAGE < AGE){
         alert('You\'re kind. He\'s older than that.  Try again.');
     }else if (guessedAGE > AGE){
