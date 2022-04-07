@@ -39,7 +39,8 @@ let qMisunderstood =0;
 
 // Question one
 // Changed string to lower case at entry into variable
-
+function guessingOne() {
+    
 let qOne = prompt('Has Jon ever been married?','yes').toLowerCase();
 
 // added default answer to prompt to speed through debug.
@@ -54,10 +55,11 @@ if(qOne === 'yes' || qOne === 'y'){
 }
 
 console.log(`"${qOne}" was recieved for the first question.`);
+}
 
 // Question two
 // Changed string to upper case at entry into variable
-
+function guessingTwo() {
 let qTwo = prompt('Has Jon ever lived in Oregon?','no').toUpperCase();
 
 if(qTwo === 'YES' || qTwo === 'Y'){
@@ -68,12 +70,13 @@ if(qTwo === 'YES' || qTwo === 'Y'){
     alert('I didn\'t understand that response.'); qMisunderstood++;
 }
 
-console.log(`"${qTwo}" was recieved for the second question.`);
 
+console.log(`"${qTwo}" was recieved for the second question.`);
+}
 // Question three
 // Changed string to lower case in conditional statement to attempt to preserve string entered by user
 // Preserving the string failed and consumed four times the amount of characters in coding.  Does a new variatble need to be put somewhere?
-
+function guessingThree() {
 let qThree = prompt('Has Jon ever been shot at?', 'no');
 
 if(qThree.toLowerCase() === 'no' || qThree.toLowerCase() === 'n'){
@@ -85,12 +88,12 @@ if(qThree.toLowerCase() === 'no' || qThree.toLowerCase() === 'n'){
 }
 
 console.log(`"${qThree}" was recieved for the third question.`);
-
+}
 // Question four
 // Changed string to lower case in conditional statement in a failed attempt to preserve string entered by user.  Does a new variatble need to be put somewhere?
 // Tried to rearanged and reduced conditional staement using parentheses and deleting spaces and breaks.  This failed also.
 // This effort only provided a minor reduction in coding characters but reduced lines or code by almost half.
-
+function guessingFour() {
 let qFour = prompt('Did Jon walk all the way from Mexico to Canada?', 'no').toLowerCase();
 if(qFour === 'yes' || qFour === 'y'){
     alert('Nope!'); qWrong++;
@@ -101,9 +104,9 @@ if(qFour === 'yes' || qFour === 'y'){
 }
 
 console.log(`"${qFour}" was recieved for the forth question.`);
-
+}
 // returned to orginally recommended case method and conditional formatting for these remaining questions.
-
+function guessingFive() {
 let qFive = prompt('Does Jon have a Bachelor\'s Degree?','no').toLowerCase();
 
 if(qFive === 'yes' || qFive === 'y'){
@@ -118,7 +121,7 @@ console.log(`"${qFive}" was recieved for the fifth question.`);
 
 alert(`Well ${visitor}, you answered ${qCorrect} questions correctly, ${qWrong} incorrectly, and we got confused ${qMisunderstood} times.
 `)
-
+}
 // As a user, I would like to be guided to an answer through a series of feedback responses so that I can learn more about the site owner.
 // Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
 // Indicates through an alert if the guess is “too high” or “too low”.
@@ -136,7 +139,7 @@ while ((guessedAGE != AGE) && (i < 4)){
 
     if(guessedAGE == AGE){
         alert(`Damnit ${visitor}! That\'s right!  `); 
-      return;  // is this cheating?  I have red squiggles.
+      break;  // is this cheating?  I have red squiggles.
     }else if (guessedAGE < AGE){
         alert('You\'re kind. He\'s older than that.  Try again.');
     }else if (guessedAGE > AGE){
