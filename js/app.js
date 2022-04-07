@@ -153,11 +153,11 @@ while ((guessedAGE != AGE) && (i < 4)){
 // Display all the possible correct answers to the user.
 // Consider using a loop of some sort for this question.
 
-let answers = [2,4,6,8,10];
-let guess = 0;
-i=0;
+//let answers = [2,4,6,8,10];
+// let guess = 0;
+// i=0;
 
-while ((i < 7) && (guess != answers)){}
+// while ((i < 7) && (guess != answers)){}
 
 
 
