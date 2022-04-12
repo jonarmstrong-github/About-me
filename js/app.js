@@ -38,87 +38,96 @@ let qWrong = 0;
 let qMisunderstood =0;
 
 // Question one
-// Changed string to lower case at entry into variable
+// Each question has been wrapped in its own functiion
+
 function guessingOne() {
-    
-let qOne = prompt('Has Jon ever been married?','yes').toLowerCase();
 
-// added default answer to prompt to speed through debug.
-// Replit did not understand these default values...  syntax?
+    // Changed string to lower case at entry into variable.
+    // added default answer to prompt to speed through debug.
+    // Replit did not understand these default values...  syntax?
 
-if(qOne === 'yes' || qOne === 'y'){
-    alert('Winner! Winner!'); qCorrect++; 
-}else if (qOne === 'no' || qOne === 'n'){
-    alert('Nope!'); qWrong++;
-}else {
-    alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
+    let qOne = prompt('Has Jon ever been married?','yes').toLowerCase();
+
+        if(qOne === 'yes' || qOne === 'y'){
+            alert('Winner! Winner!');
+            qCorrect++; //added points to overall score of correct responses
+        }else if (qOne === 'no' || qOne === 'n'){
+            alert('Nope!'); 
+            qWrong++; //added points to overall score of incorrect responses
+        }else {
+            alert('I didn\'t understand that response. I can only understand yes/no or y/n.');
+            qMisunderstood++; //added points to overall score of misunderstood responses
+        }
+    console.log(`"${qOne}" was recieved for the first question.`);
 }
-
-console.log(`"${qOne}" was recieved for the first question.`);
-}
+guessingOne();
 
 // Question two
 // Changed string to upper case at entry into variable
+
 function guessingTwo() {
-let qTwo = prompt('Has Jon ever lived in Oregon?','no').toUpperCase();
-
-if(qTwo === 'YES' || qTwo === 'Y'){
-    alert('Nope!'); qWrong++;
-}else if (qTwo === 'NO' || qTwo === 'N'){
-    alert('Winner! Winner!'); qCorrect++;
-}else {
-    alert('I didn\'t understand that response.'); qMisunderstood++;
+    let qTwo = prompt('Has Jon ever lived in Oregon?','no').toUpperCase();
+        if(qTwo === 'YES' || qTwo === 'Y'){
+            alert('Nope!'); qWrong++;
+        }else if (qTwo === 'NO' || qTwo === 'N'){
+            alert('Winner! Winner!'); qCorrect++;
+        }else {
+            alert('I didn\'t understand that response.'); qMisunderstood++;
+        }
+    console.log(`"${qTwo}" was recieved for the second question.`);
 }
+guessingTwo();
 
-
-console.log(`"${qTwo}" was recieved for the second question.`);
-}
 // Question three
 // Changed string to lower case in conditional statement to attempt to preserve string entered by user
 // Preserving the string failed and consumed four times the amount of characters in coding.  Does a new variatble need to be put somewhere?
+
 function guessingThree() {
-let qThree = prompt('Has Jon ever been shot at?', 'no');
-
-if(qThree.toLowerCase() === 'no' || qThree.toLowerCase() === 'n'){
-    alert('Winner! Winner!'); qCorrect++; 
-}else if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y'){
-    alert('Nope!'); qWrong++;
-}else {
-    alert('I didn\'t understand that response.'); qMisunderstood++;
+    let qThree = prompt('Has Jon ever been shot at?', 'no');
+        if(qThree.toLowerCase() === 'no' || qThree.toLowerCase() === 'n'){
+            alert('Winner! Winner!'); qCorrect++; 
+        }else if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y'){
+            alert('Nope!'); qWrong++;
+        }else {
+            alert('I didn\'t understand that response.'); qMisunderstood++;
+        }
+    console.log(`"${qThree}" was recieved for the third question.`);
 }
+guessingThree();
 
-console.log(`"${qThree}" was recieved for the third question.`);
-}
 // Question four
 // Changed string to lower case in conditional statement in a failed attempt to preserve string entered by user.  Does a new variatble need to be put somewhere?
 // Tried to rearanged and reduced conditional staement using parentheses and deleting spaces and breaks.  This failed also.
 // This effort only provided a minor reduction in coding characters but reduced lines or code by almost half.
+
 function guessingFour() {
-let qFour = prompt('Did Jon walk all the way from Mexico to Canada?', 'no').toLowerCase();
-if(qFour === 'yes' || qFour === 'y'){
-    alert('Nope!'); qWrong++;
-}else if (qFour === 'no' || qFour === 'n'){
-    alert('Winner! Winner!'); qCorrect++;
-}else {
-    alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
+    let qFour = prompt('Did Jon walk all the way from Mexico to Canada?', 'no').toLowerCase();
+        if(qFour === 'yes' || qFour === 'y'){
+            alert('Nope!'); qWrong++;
+        }else if (qFour === 'no' || qFour === 'n'){
+            alert('Winner! Winner!'); qCorrect++;
+        }else {
+            alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
+        }
+    console.log(`"${qFour}" was recieved for the forth question.`);
 }
+guessingFour();
 
-console.log(`"${qFour}" was recieved for the forth question.`);
-}
 // returned to orginally recommended case method and conditional formatting for these remaining questions.
+
 function guessingFive() {
-let qFive = prompt('Does Jon have a Bachelor\'s Degree?','no').toLowerCase();
+    let qFive = prompt('Does Jon have a Bachelor\'s Degree?','no').toLowerCase();
+        if(qFive === 'yes' || qFive === 'y'){
+            alert('Nope'); qWrong++;
+        }else if (qFive === 'no' || qFive === 'n'){
+            alert('Winner! Winner!!'); qCorrect++; 
+        }else {
+            alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
+        }
+    console.log(`"${qFive}" was recieved for the fifth question.`);
+guessingFive();
 
-if(qFive === 'yes' || qFive === 'y'){
-    alert('Nope'); qWrong++;
-}else if (qFive === 'no' || qFive === 'n'){
-    alert('Winner! Winner!!'); qCorrect++; 
-}else {
-    alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
-}
-
-console.log(`"${qFive}" was recieved for the fifth question.`);
-
+// Score
 alert(`Well ${visitor}, you answered ${qCorrect} questions correctly, ${qWrong} incorrectly, and we got confused ${qMisunderstood} times.
 `)
 }
