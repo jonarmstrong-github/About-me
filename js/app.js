@@ -1,7 +1,7 @@
 'use strict'
 
 // Greeting code from John Duckett's JAVASCRIPT & JQUERY"
-// Greeding pulled Coordinated Universal Time not local time
+// Greeting pulled Coordinated Universal Time not local time
 // I have not learned how to find a visitor's local time yet
 
 console.log('Hello.  Your script started.')
@@ -12,11 +12,11 @@ let greeting
 
 if (hourNow > 18) {
     greeting = 'Good evening ';
-}else if (hourNow > 12) {
+} else if (hourNow > 12) {
     greeting = 'Good afternoon ';
-}else if (hourNow > 0) {
+} else if (hourNow > 0) {
     greeting = 'Good morning ';
-}else {
+} else {
     greeting = 'Welcome';
 }
 
@@ -35,10 +35,10 @@ console.log(`The name "${visitor}" was provided.`);
 
 let qCorrect = 0;
 let qWrong = 0;
-let qMisunderstood =0;
+let qMisunderstood = 0;
 
 // Question one
-// Each question has been wrapped in its own functiion
+// Each question has been wrapped in its own function
 
 function guessingOne() {
 
@@ -46,19 +46,19 @@ function guessingOne() {
     // added default answer to prompt to speed through debug.
     // Replit did not understand these default values...  syntax?
 
-    let qOne = prompt('Has Jon ever been married?','yes').toLowerCase();
+    let qOne = prompt('Has Jon ever been married?', 'yes').toLowerCase();
 
-        if(qOne === 'yes' || qOne === 'y'){
-            alert('Winner! Winner!');
-            qCorrect++; //added points to overall score of correct responses
-        }else if (qOne === 'no' || qOne === 'n'){
-            alert('Nope!'); 
-            qWrong++; //added points to overall score of incorrect responses
-        }else {
-            alert('I didn\'t understand that response. I can only understand yes/no or y/n.');
-            qMisunderstood++; //added points to overall score of misunderstood responses
-        }
-    console.log(`"${qOne}" was recieved for the first question.`);
+    if (qOne === 'yes' || qOne === 'y') {
+        alert('Winner! Winner!');
+        qCorrect++; //added points to overall score of correct responses
+    } else if (qOne === 'no' || qOne === 'n') {
+        alert('Nope!');
+        qWrong++; //added points to overall score of incorrect responses
+    } else {
+        alert('I didn\'t understand that response. I can only understand yes/no or y/n.');
+        qMisunderstood++; //added points to overall score of misunderstood responses
+    }
+    console.log(`"${qOne}" was received for the first question.`);
 }
 guessingOne();
 
@@ -66,69 +66,69 @@ guessingOne();
 // Changed string to upper case at entry into variable
 
 function guessingTwo() {
-    let qTwo = prompt('Has Jon ever lived in Oregon?','no').toUpperCase();
-        if(qTwo === 'YES' || qTwo === 'Y'){
-            alert('Nope!'); qWrong++;
-        }else if (qTwo === 'NO' || qTwo === 'N'){
-            alert('Winner! Winner!'); qCorrect++;
-        }else {
-            alert('I didn\'t understand that response.'); qMisunderstood++;
-        }
-    console.log(`"${qTwo}" was recieved for the second question.`);
+    let qTwo = prompt('Has Jon ever lived in Oregon?', 'no').toUpperCase();
+    if (qTwo === 'YES' || qTwo === 'Y') {
+        alert('Nope!'); qWrong++;
+    } else if (qTwo === 'NO' || qTwo === 'N') {
+        alert('Winner! Winner!'); qCorrect++;
+    } else {
+        alert('I didn\'t understand that response.'); qMisunderstood++;
+    }
+    console.log(`"${qTwo}" was received for the second question.`);
 }
 guessingTwo();
 
 // Question three
 // Changed string to lower case in conditional statement to attempt to preserve string entered by user
-// Preserving the string failed and consumed four times the amount of characters in coding.  Does a new variatble need to be put somewhere?
+// Preserving the string failed and consumed four times the amount of characters in coding.  Does a new variable need to be put somewhere?
 
 function guessingThree() {
     let qThree = prompt('Has Jon ever been shot at?', 'no');
-        if(qThree.toLowerCase() === 'no' || qThree.toLowerCase() === 'n'){
-            alert('Winner! Winner!'); qCorrect++; 
-        }else if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y'){
-            alert('Nope!'); qWrong++;
-        }else {
-            alert('I didn\'t understand that response.'); qMisunderstood++;
-        }
-    console.log(`"${qThree}" was recieved for the third question.`);
+    if (qThree.toLowerCase() === 'no' || qThree.toLowerCase() === 'n') {
+        alert('Winner! Winner!'); qCorrect++;
+    } else if (qThree.toLowerCase() === 'yes' || qThree.toLowerCase() === 'y') {
+        alert('Nope!'); qWrong++;
+    } else {
+        alert('I didn\'t understand that response.'); qMisunderstood++;
+    }
+    console.log(`"${qThree}" was received for the third question.`);
 }
 guessingThree();
 
 // Question four
-// Changed string to lower case in conditional statement in a failed attempt to preserve string entered by user.  Does a new variatble need to be put somewhere?
-// Tried to rearanged and reduced conditional staement using parentheses and deleting spaces and breaks.  This failed also.
+// Changed string to lower case in conditional statement in a failed attempt to preserve string entered by user.  Does a new variable need to be put somewhere?
+// Tried to rearranged and reduced conditional statement using parentheses and deleting spaces and breaks.  This failed also.
 // This effort only provided a minor reduction in coding characters but reduced lines or code by almost half.
 
 function guessingFour() {
     let qFour = prompt('Did Jon walk all the way from Mexico to Canada?', 'no').toLowerCase();
-        if(qFour === 'yes' || qFour === 'y'){
-            alert('Nope!'); qWrong++;
-        }else if (qFour === 'no' || qFour === 'n'){
-            alert('Winner! Winner!'); qCorrect++;
-        }else {
-            alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
-        }
-    console.log(`"${qFour}" was recieved for the forth question.`);
+    if (qFour === 'yes' || qFour === 'y') {
+        alert('Nope!'); qWrong++;
+    } else if (qFour === 'no' || qFour === 'n') {
+        alert('Winner! Winner!'); qCorrect++;
+    } else {
+        alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
+    }
+    console.log(`"${qFour}" was received for the forth question.`);
 }
 guessingFour();
 
-// returned to orginally recommended case method and conditional formatting for these remaining questions.
+// returned to originally recommended case method and conditional formatting for these remaining questions.
 
 function guessingFive() {
-    let qFive = prompt('Does Jon have a Bachelor\'s Degree?','no').toLowerCase();
-        if(qFive === 'yes' || qFive === 'y'){
-            alert('Nope'); qWrong++;
-        }else if (qFive === 'no' || qFive === 'n'){
-            alert('Winner! Winner!!'); qCorrect++; 
-        }else {
-            alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
-        }
-    console.log(`"${qFive}" was recieved for the fifth question.`);
-guessingFive();
+    let qFive = prompt('Does Jon have a Bachelor\'s Degree?', 'no').toLowerCase();
+    if (qFive === 'yes' || qFive === 'y') {
+        alert('Nope'); qWrong++;
+    } else if (qFive === 'no' || qFive === 'n') {
+        alert('Winner! Winner!!'); qCorrect++;
+    } else {
+        alert('I didn\'t understand that response. I can only understand yes/no or y/n.'); qMisunderstood++;
+    }
+    console.log(`"${qFive}" was received for the fifth question.`);
+    guessingFive();
 
-// Score
-alert(`Well ${visitor}, you answered ${qCorrect} questions correctly, ${qWrong} incorrectly, and we got confused ${qMisunderstood} times.
+    // Score
+    alert(`Well ${visitor}, you answered ${qCorrect} questions correctly, ${qWrong} incorrectly, and we got confused ${qMisunderstood} times.
 `)
 }
 // As a user, I would like to be guided to an answer through a series of feedback responses so that I can learn more about the site owner.
@@ -141,20 +141,20 @@ let AGE = 40;
 let guessedAGE = 0;
 let i = 0;
 
-while ((guessedAGE != AGE) && (i < 4)){
-  //the loop would never stop when the (guessedAGE = AGE)
-  i++;
+while ((guessedAGE != AGE) && (i < 4)) {
+    //the loop would never stop when the (guessedAGE = AGE)
+    i++;
     let guessedAGE = prompt(`Hey ${visitor}, what do you think Jon's age is?`);
 
-    if(guessedAGE == AGE){
-        alert(`Damnit ${visitor}! That\'s right!  `); 
-      break;  // is this cheating?  I have red squiggles.
-    }else if (guessedAGE < AGE){
+    if (guessedAGE == AGE) {
+        alert(`Damnit ${visitor}! That\'s right!  `);
+        break;  // is this cheating?  I have red squiggles.
+    } else if (guessedAGE < AGE) {
         alert('You\'re kind. He\'s older than that.  Try again.');
-    }else if (guessedAGE > AGE){
+    } else if (guessedAGE > AGE) {
         alert('Ooof...  No, it\'s just been a long week.  Try a little younger.');
-    }else {
-      alert('I didn\'t understand that response. Try a normal human age.');
+    } else {
+        alert('I didn\'t understand that response. Try a normal human age.');
     }
 }
 
@@ -189,7 +189,7 @@ while ((guessedAGE != AGE) && (i < 4)){
 //     alert('I didn\'t understand that response. I can only understand yes/no or y/n.');
 // }
 
-// console.log(`"${qSix}" was recieved for the sixth question.`);
+// console.log(`"${qSix}" was received for the sixth question.`);
 
 // let qSeven = prompt('Has Jon worked in a computer industry before?','yes').toLowerCase();
 
@@ -201,7 +201,7 @@ while ((guessedAGE != AGE) && (i < 4)){
 //     alert('I didn\'t understand that response. I can only understand yes/no or y/n.');
 // }
 
-//console.log(`"${qSeven}" was recieved for the seventh question.`);
+//console.log(`"${qSeven}" was received for the seventh question.`);
 
 
 
